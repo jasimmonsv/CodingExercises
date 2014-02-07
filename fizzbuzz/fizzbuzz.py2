@@ -1,0 +1,46 @@
+#!/usr/bin/python
+import sys
+
+input= []
+
+def fizzbuzz(fizz, buzz, count):
+  #process numbers
+  #TODO check for errors
+  for x in range(1,count+1):
+    if x%fizz == 0 and x%buzz ==0:
+      print('FB'),
+    else:
+      if x%fizz == 0:
+        print('F'),
+      if x%buzz == 0:
+        print('B'),
+      if x%buzz !=0 and x%fizz !=0:
+        print x,
+  print ""
+
+#read in file
+if len(sys.argv) < 2:
+  print "no argurments given"
+  quit()
+else:
+  fname = sys.argv[1]
+ins = open( fname, "r" )
+input = []
+for line in ins:
+    line.strip()
+    input.append(line)
+ins.close()
+
+for x in input:
+  x.strip()
+  proc = x.split(' ')
+  fizz = int(proc[0])
+  buzz = int(proc[1])
+  count = int(proc[2])
+  fizzbuzz(fizz, buzz, count)
+  
+
+
+
+
+#print output
