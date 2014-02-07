@@ -4,8 +4,6 @@ import sys
 input= []
 
 def fizzbuzz(fizz, buzz, count):
-  #process numbers
-  #TODO check for errors
   for x in range(1,count+1):
     if x%fizz == 0 and x%buzz ==0:
       print('FB'),
@@ -25,19 +23,17 @@ if len(sys.argv) < 2:
 else:
   fname = sys.argv[1]
 ins = open( fname, "r" )
-input = []
+
 for line in ins:
     line.strip()
-    input.append(line)
-ins.close()
+    proc = line.split(' ')
+    fizz = int(proc[0])
+    buzz = int(proc[1])
+    count = int(proc[2])
+    fizzbuzz(fizz, buzz, count)
 
-for x in input:
-  x.strip()
-  proc = x.split(' ')
-  fizz = int(proc[0])
-  buzz = int(proc[1])
-  count = int(proc[2])
-  fizzbuzz(fizz, buzz, count)
+ins.close()
+  
   
 
 
