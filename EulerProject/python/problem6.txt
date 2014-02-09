@@ -1,0 +1,10 @@
+#! /usr/bin/python
+
+SoS = 0
+sum = 0
+
+for x in range(1,101):
+  SoS = SoS+(x*x)
+  sum = sum + x
+
+print((sum*sum)-SoS)

@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<title>Euler Project</title>
+</head>
+<body>
+<div id='answer'>0</div>
+  <script>
+    var fib1 = 1;
+    var fib2 = 1;
+    var fibTmp = 0;
+    var limit = 4000000;
+    var sum = 0;
+    while( fib1 < limit && fib2 < limit ) {
+      fibTmp = fib1+fib2;
+      if(fibTmp % 2 == 0)sum = sum + fibTmp;
+      fib1 = fib2;
+      fib2 = fibTmp;
+    };
+    document.getElementById('answer').innerHTML = sum;
+  </script>
+</body>
+</html>

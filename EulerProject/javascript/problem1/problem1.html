@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head>
+<title>Euler Project</title>
+</head>
+<body>
+<div id=answer>0</div>
+  <script>
+var given = 1000;
+var sum = 0;
+for(x = 0; x < given; x++) 
+   if( x % 3 == 0 || x % 5 == 0){
+     sum = sum + x;
+   };
+document.getElementById('answer').innerHTML = sum;
+  </script>
+</body>
+</html>
